@@ -27,8 +27,8 @@
         <Label Content="IMPORTO DA REST." HorizontalAlignment="Left" Height="29" Margin="374,207,0,0" VerticalAlignment="Top" Width="125"/>
         <Label Content="IMPORTO PER RATA" HorizontalAlignment="Left" Height="29" Margin="374,259,0,0" VerticalAlignment="Top" Width="125"/>
         <Button x:Name="txtcalcola" Content="CALCOLA" HorizontalAlignment="Left" Height="29" Margin="702,31,0,0" VerticalAlignment="Top" Width="80" Click="txtcalcola_Click"/>
-        <Button x:Name="txtnuovo" Content="NUOVO" HorizontalAlignment="Left" Height="29" Margin="702,152,0,0" VerticalAlignment="Top" Width="80" Click="txtnuovo_Click"/>
-        <Button x:Name="txtstampa" Content="STAMPA" HorizontalAlignment="Left" Height="29" Margin="702,263,0,0" VerticalAlignment="Top" Width="80" Click="txtstampa_Click"/>
+        <Button x:Name="txtnuovo" Content="FILE CSV" HorizontalAlignment="Left" Height="29" Margin="702,152,0,0" VerticalAlignment="Top" Width="80" Click="txtnuovo_Click"/>
+        <Button x:Name="txtstampa" Content="VISUALIZZA" HorizontalAlignment="Left" Height="29" Margin="702,263,0,0" VerticalAlignment="Top" Width="80" Click="txtstampa_Click"/>
         <Label Name="lblresult" Content="" HorizontalAlignment="Left" Margin="10,329,0,0" VerticalAlignment="Top" FontSize="11" Height="80" Width="772"/>
         <Label Name="lblrestituire" Content="" HorizontalAlignment="Left" Height="24" Margin="520,205,0,0" VerticalAlignment="Top" Width="134"/>
         <Label Name="lblimprata" Content="" HorizontalAlignment="Left" Height="24" Margin="520,259,0,0" VerticalAlignment="Top" Width="134"/>

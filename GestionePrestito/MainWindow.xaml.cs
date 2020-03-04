@@ -36,7 +36,8 @@ namespace GestionePrestito
         string nome;
         string nat;
         string citta;
-        string rep;
+        string rep1;
+        string rep2;
         const string file = ("stat.csv");
         private void txtcalcola_Click(object sender, RoutedEventArgs e)
 
@@ -70,9 +71,10 @@ namespace GestionePrestito
              calcoloperc = (perc * importo) / 100;
              importores = importo + calcoloperc;
              imprata = importores / rate;
-             rep= ($"{cognome} {nome}, residente in {citta} {nat} il {datapicker.SelectedDate}. Prestito di {importo} ad un tasso del {perc}% da rstituire in {rate} rate da {imprata}€ ciascuna, per un totale di {importores}€");
-            lblresult.Content = (rep);
-            riepiloghi.Add(rep);
+             rep1= ($"{cognome} {nome}, residente in {citta} {nat} il {datapicker.SelectedDate}; prestito di {importo} ad un tasso del {perc}% da rstituire in {rate} rate da {imprata}€ ciascuna, per un totale di {importores}€.");
+            rep2 = $"{cognome};{nome};{citta};{nat};{datapicker.SelectedDate};{importo};{perc};{rate};{imprata};{importores}";
+            lblresult.Content = (rep1);
+            riepiloghi.Add(rep2);
 
 
         }
@@ -80,8 +82,14 @@ namespace GestionePrestito
         private void txtnuovo_Click(object sender, RoutedEventArgs e)
         {
             StreamWriter w = new StreamWriter(file);
+            w.WriteLine("cognome;nome;città;sesso;data;importo richiesto;percentuale interessi;numero rate;importo singola rata;importo da restituire");
+
+            for (int i = 0; i < riepiloghi.Count; i++)
             {
-                w.WriteLine("");
+                {
+                    w.WriteLine(riepiloghi[i]);
+                }
+            
             }
             w.Flush();
             w.Close();
